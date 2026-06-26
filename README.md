@@ -6,23 +6,53 @@ A LaTeX template for LWC reports, program documents, and papers.
 
 ```
 latex-paper-template/
-├── paper.tex         # Main document — edit this
-├── appendix.tex      # Optional standalone appendix
-├── figures/          # Place image files here
+├── paper.tex              # Template — copy into docs/<folder>/ to start a new document
+├── appendix.tex           # Optional standalone appendix template
+├── figures/               # Template placeholder for figures
 ├── style/
-│   ├── paper.sty     # Main LaTeX style (do not edit)
-│   ├── paper.bst     # BibTeX bibliography style (do not edit)
-│   └── appendix.sty  # Appendix style (do not edit)
-└── refs/
-    └── paper.bib     # Bibliography entries — add references here
+│   ├── paper.sty          # Main LaTeX style (do not edit)
+│   ├── paper.bst          # BibTeX bibliography style (do not edit)
+│   └── appendix.sty       # Appendix style (do not edit)
+├── refs/
+│   └── paper.bib          # Template bibliography entries
+└── docs/
+    └── upper-watershed-committee/
+        ├── paper.tex      # Upper Watershed Committee document
+        └── figures/       # Figures for this document
 ```
 
-## Usage
+## Starting a new document
 
-1. Edit `paper.tex` — replace title, author, date, and body text.
-2. Add image files to `figures/` and reference them with `\includegraphics{figures/filename}`.
-3. Add bibliography entries to `refs/paper.bib`.
-4. Compile:
+1. Create a folder under `docs/`: `docs/<folder-name>/`
+2. Copy `paper.tex` into the new folder.
+3. In the copied `paper.tex`, update the style paths:
+
+```latex
+\usepackage{../../style/paper}
+\bibliographystyle{../../style/paper}
+```
+
+4. Edit the title, author, date, and body text.
+5. Add a `paper.bib` file in the same folder for bibliography entries (if needed).
+6. Place figure files in a `figures/` subfolder (if needed).
+
+## Compiling a document
+
+From the document's folder:
+
+```bash
+cd docs/<folder-name>
+pdflatex paper.tex
+bibtex paper               # only if the document has a bibliography
+pdflatex paper.tex
+pdflatex paper.tex
+```
+
+If the document has no bibliography, a single `pdflatex paper.tex` is sufficient.
+
+## Compiling the template
+
+From the repo root:
 
 ```bash
 pdflatex paper.tex
@@ -31,11 +61,9 @@ pdflatex paper.tex
 pdflatex paper.tex
 ```
 
-If the document has no bibliography, a single `pdflatex paper.tex` is sufficient.
-
 ## Online appendix
 
-To compile the standalone appendix:
+To compile the standalone appendix template (from the repo root):
 
 ```bash
 # Compile the main document first to generate paper.aux

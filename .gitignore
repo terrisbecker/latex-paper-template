@@ -1,4 +1,6 @@
 # LaTeX build artifacts
+*.aux
+*.bbl
 *.blg
 *.brf
 *.fdb_latexmk
