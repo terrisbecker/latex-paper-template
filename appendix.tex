@@ -1,15 +1,9 @@
 \documentclass[letterpaper,11pt,leqno]{article}
-\usepackage{paper,appendix}
-\bibliographystyle{paper}
+\usepackage{style/paper,style/appendix}
+\bibliographystyle{style/paper}
 
 % Enter appendix title to populate PDF metadata:
-\hypersetup{pdftitle={Minimalist LaTeX Template for Online Appendices}}
-
-% Enter path to BibTeX file with references:
-\newcommand{\bib}{paper.bib}
-
-% Enter path to PDF file with figures:
-\newcommand{\pdf}{figures.pdf}
+\hypersetup{pdftitle={Document Title: Online Appendix}}
 
 % Enter main TeX file so references can be used in appendix:
 \externaldocument{paper}
@@ -17,16 +11,16 @@
 \begin{document}
 
 % Enter title:
-\title{Research Paper: Online Appendices}
+\title{Document Title: Online Appendix}
 
 % Enter authors:
-\author{First Author, Second Author}
+\author{Lacamas Watershed Council}
 
 % Enter date:
 \date{Month Year}
 
-% Enter publication journal and paper URL (can be commented out):
-\paperurl[Journal]{https://github.com/pmichaillat/latex-paper}
+% Enter document URL (can be commented out):
+% \paperurl{https://lacamaswatershed.org}
 
 \begin{titlepage}
 \maketitle
@@ -192,5 +186,5 @@ S^*(z) = \frac{\alpha}{1-\gamma (1-\alpha)} > \alpha.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam magna vel urna ultrices, sed lacinia nulla mattis. Fusce non nunc nec est mollis malesuada. Nullam dignissim nulla sit amet libero facilisis, eget fringilla libero sagittis. Suspendisse potenti. Vivamus fermentum consectetur ante, at rhoncus nisi tristique vel. Vivamus in est quis justo fermentum lacinia ac eu leo. Maecenas nec tempor nisi. Sed interdum, nunc ac dapibus lacinia, nunc neque rutrum urna, vel dignissim lectus turpis eu lorem. Donec commodo justo a eros malesuada, eget vulputate tortor accumsan. Sed ac pulvinar nulla. Etiam quis felis dapibus, vulputate metus eu, finibus nunc. Sed vel sodales dui. Nam venenatis dolor non orci tempus fermentum. Vivamus sodales justo a ligula cursus aliquet. Sed fringilla nunc vitae justo finibus, id placerat lectus sodales.
 
-\bibliography{\bib}
+\bibliography{refs/paper}
 \end{document}
