@@ -10,7 +10,7 @@ ii. Arguments. The user will privide the path of a file that they want you to re
 
 iii. References. References are available in the .claude/skills/doc-review/references directory. These include the Elements of Style, an example template of non-profit bylaws, and the LWC bylaws and charter. Refer to these documents as needed to ensure that your suggestions are consistent with the principles outlined in these documents. If at any point you are unsure about a suggestion, refer to these documents for guidance. If you identify any inconsistencies between the document being reviewed and the bylaws or charter, suggest edits to resolve these inconsistencies.
 
-iv. Scope of edits. Read the commit history and version control for the repository. Only propose edits to newly added material and/or old material that may need changed in the context of newly added material.
+iv. Only review the current git branch. You may read the entire document, but only suggest edits to content that was added on the current git branch. If the branch is on "main" or "master" then review the entire document.
 
 ** Begin document review **
 
