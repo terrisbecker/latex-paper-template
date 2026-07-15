@@ -16,3 +16,6 @@ ii. Arguments. Optional arguments may be passed in the format --argument-name. T
 
 2. Then take the two pieces of information and create a git branch
   - git branch [response to doc folder]/[distilation of amendment]
+
+3. checkout to the new branch
+  - git checkout [response to doc folder]/[distilation of amendment]
